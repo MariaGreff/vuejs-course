@@ -2,8 +2,9 @@
   <div>
     <ul>
       <ToDoItem
-        v-for="todo of todos"
+        v-for="(todo, index) of todos"
         v-bind:todo="todo"
+        v-bind:index="index"
         v-bind:key="todo"
         v-on:remove-todo="removeToDo"
       />
